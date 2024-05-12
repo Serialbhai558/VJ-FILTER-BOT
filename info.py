@@ -9,7 +9,7 @@ from Script import script
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
-    if value.lower() in ["true", "yes", "1", "enable", "y"]:
+    if value.lower() in ["false", "no", "1", "enable", "y"]:
         return True
     elif value.lower() in ["false", "no", "0", "disable", "n"]:
         return False
@@ -18,9 +18,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'TechVJBot')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_ID = int(environ.get('API_ID', '28758972'))
+API_HASH = environ.get('API_HASH', '4e75eb6c300c41d2003671f2b21641e7')
+BOT_TOKEN = environ.get('BOT_TOKEN', "7002366075:AAGz4rqweyfvbAV5qV_MF4fpSYkw7AnJf44")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
@@ -50,7 +50,10 @@ FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv:l/
+sushankm16:4i1WAfPYKWyqPIDD@cluster0
+.sngp9pz. mongodb.net/?retryWrites=true&w=
+majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "techvjbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'techvjcollection')
 
